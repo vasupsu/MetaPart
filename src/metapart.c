@@ -467,6 +467,7 @@ printf ("[%d] tid %d fp1 NULL, fileNo %d\n", rank, tid, curFile);
                         if (curFile < numPEFiles)
                                 bytesToRead2 = endOfs2-curOfs2;
                 }
+		printf ("bufferBytesRemaining1 %lu, bytesToRead1 %lu\n", bufferBytesRemaining1, bytesToRead1);
                 assert (bufferBytesRemaining1 > bytesToRead1);
 		size_t curReadOfs = ftell (fp1);
                 size_t numBytesRead = fread (&(fqBuffer[0][bufferOfs1]), 1, bytesToRead1, fp1);

@@ -257,7 +257,7 @@ int main(int argc, char **argv) {
 		int k=0;
 		for (j=0; j<nread; j++)
 		{
-			if ((readChunk[j]=='\n') && (readChunk[j+1]=='+') && (readChunk[j+2]=='\n'))
+			if ((readChunk[j]=='\n') && (readChunk[j+1]=='+') /*&& (readChunk[j+2]=='\n')*/)
 			{
 				flag=1;
 				j=j+2;
